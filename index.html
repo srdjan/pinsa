@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentic Roman Pinsa Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1200px;
+    }
+
+    .recipe-card {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-card {
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bg-pinsa {
+      background-color: #FFF8E1;
+    }
+
+    .text-pinsa {
+      color: #B71C1C;
+    }
+
+    .history-card {
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://cdn.jsdelivr.net/gh/tailwindlabs/heroicons@v1.0.0/dist/outline/history.svg');
+      background-size: 200px;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-pinsa mb-4">Roman Pinsa</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">The ancient Roman flatbread with a light, airy texture and
+        crispy crust that's taking the culinary world by storm</p>
+    </header>
+
+    <!-- History Section -->
+    <section class="mb-12">
+      <div class="history-card p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-4 text-pinsa">The History of Pinsa</h2>
+        <div class="md:flex md:space-x-6">
+          <div class="md:w-2/3">
+            <p class="mb-4">The term "pinsa" derives from the Latin word <em>pinsere</em>, meaning "to stretch" or
+              "press out," referring to the traditional method of hand-stretching the dough into its characteristic oval
+              shape.</p>
+            <p class="mb-4">Dating back over 2000 years to ancient Rome, pinsa was originally a simple flatbread made by
+              farmers using a mixture of cereals like millet, barley, and spelt. It was considered poor man's food,
+              often topped simply with olive oil, salt, and aromatic herbs.</p>
+            <p>The modern version of Pinsa Romana was refined around 2001 by Corrado Di Marco, who developed the special
+              flour blend that gives pinsa its distinctive light, airy texture and high digestibility. Since then, pinsa
+              has experienced a culinary renaissance with thousands of specialized shops (<em>pinserie</em>) opening
+              throughout Italy and worldwide.</p>
+          </div>
+          <div class="md:w-1/3 mt-4 md:mt-0">
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h3 class="text-xl font-bold mb-2">Pinsa vs. Pizza: The Differences</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Uses a blend of wheat, rice, and soy/spelt flours</li>
+                <li>Higher hydration (80% water content)</li>
+                <li>Oval shape rather than round</li>
+                <li>Longer fermentation (24-72 hours)</li>
+                <li>Lighter, more digestible, and airier texture</li>
+                <li>Crispy exterior with soft interior</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipe Ingredients Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-pinsa text-center">Authentic Roman Pinsa Recipe</h2>
+      <div class="recipe-card bg-white p-6 md:p-8">
+        <div class="md:flex md:space-x-8">
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold mb-4">Dough Ingredients</h3>
+            <p class="mb-2 text-gray-600 italic">Makes 2-3 medium-sized pinsa</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">500g</span> Italian "00" flour (or all-purpose flour)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">50g</span> rice flour (essential for authentic texture)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">40g</span> spelt flour (or soy flour as alternative)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">460ml</span> ice-cold water (about 80% hydration)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">2.5g</span> active dry yeast (about ¾ tsp)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">10g</span> salt (about 1¾ tsp)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="font-bold">5ml</span> extra virgin olive oil (1 tsp), plus more for topping
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  Semolina flour for dusting and shaping
+                </div>
+              </li>
+            </ul>
+
+            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+              <h4 class="font-bold text-lg mb-2">Equipment Needed:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <span class="text-yellow-600 mr-2"><i class="fas fa-utensils"></i></span>
+                  Large mixing bowl
+                </li>
+                <li class="flex items-center">
+                  <span class="text-yellow-600 mr-2"><i class="fas fa-blender"></i></span>
+                  Stand mixer with dough hook (optional but helpful)
+                </li>
+                <li class="flex items-center">
+                  <span class="text-yellow-600 mr-2"><i class="fas fa-temperature-high"></i></span>
+                  Pizza stone or heavy baking sheet
+                </li>
+                <li class="flex items-center">
+                  <span class="text-yellow-600 mr-2"><i class="fas fa-cut"></i></span>
+                  Kitchen scissors (best for cutting without crushing air pockets)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 mt-6 md:mt-0">
+            <h3 class="text-2xl font-bold mb-4">Popular Topping Combinations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">Classic Margherita</h4>
+                <ul class="space-y-1">
+                  <li>Tomato sauce</li>
+                  <li>Fresh mozzarella, torn into pieces</li>
+                  <li>Fresh basil leaves (add after baking)</li>
+                  <li>Drizzle of extra virgin olive oil</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">Mortadella & Burrata</h4>
+                <ul class="space-y-1">
+                  <li>Bake pinsa base with olive oil only</li>
+                  <li>After baking, top with torn burrata</li>
+                  <li>Thin slices of mortadella</li>
+                  <li>Crushed pistachios and black pepper</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">Artichoke & Pancetta</h4>
+                <ul class="space-y-1">
+                  <li>Shredded mozzarella</li>
+                  <li>Diced pancetta or bacon</li>
+                  <li>Prepared artichoke hearts</li>
+                  <li>Freshly grated Parmesan</li>
+                  <li>Fresh oregano</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">Traditional Simple</h4>
+                <ul class="space-y-1">
+                  <li>Good quality olive oil</li>
+                  <li>Flaky sea salt</li>
+                  <li>Fresh rosemary</li>
+                  <li>Optional: thinly sliced garlic</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step-by-Step Instructions -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-pinsa text-center">Step-by-Step Instructions</h2>
+      <p class="text-center mb-8 max-w-2xl mx-auto">This process spans 2-3 days, but the actual hands-on time is
+        minimal. The magic happens during the long fermentation.</p>
+
+      <div class="space-y-8">
+        <!-- Day 1: Prepare the Dough -->
+        <div class="step-card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-4">Day 1: Prepare the Dough</h3>
+          <div class="md:flex md:space-x-6">
+            <div class="md:w-2/3">
+              <ol class="space-y-4">
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">1</span>
+                  <div>
+                    <p class="font-bold">Mix dry ingredients</p>
+                    <p>In a large bowl, whisk together the "00" flour, rice flour, and spelt flour with the yeast until
+                      well combined.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">2</span>
+                  <div>
+                    <p class="font-bold">Add water gradually</p>
+                    <p>Add about ¾ of the cold water (350ml) to the flour mixture and begin mixing either by hand or
+                      with a stand mixer using the dough hook attachment. The dough may look dry at first.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">3</span>
+                  <div>
+                    <p class="font-bold">Add oil and salt</p>
+                    <p>Add the remaining water with the salt and olive oil. Knead for about 10-12 minutes until the
+                      dough becomes smooth and elastic. Note: The dough will be very sticky - resist the urge to add
+                      more flour.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">4</span>
+                  <div>
+                    <p class="font-bold">First rest</p>
+                    <p>Cover the bowl with plastic wrap or a damp towel and let it rest at room temperature for about 1
+                      hour until it doubles in size.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">5</span>
+                  <div>
+                    <p class="font-bold">Fold and refrigerate</p>
+                    <p>After the initial rise, use a spatula to fold the dough over itself a few times. Place the dough
+                      in a clean, lightly oiled bowl, cover tightly, and refrigerate for 24-72 hours. This long, cold
+                      fermentation is key to developing flavor and improving digestibility.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="md:w-1/3 mt-4 md:mt-0">
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 class="font-bold text-lg mb-2">Expert Tips:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                    <p>Use ice-cold water to slow fermentation and develop flavor.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                    <p>The dough will be very sticky - use wet or oiled hands to handle it rather than adding more
+                      flour.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                    <p>For best flavor development, aim for at least 36 hours of cold fermentation.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 or 3: Shape and Bake -->
+        <div class="step-card bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-4">Day 2 or 3: Shape and Bake</h3>
+          <div class="md:flex md:space-x-6">
+            <div class="md:w-2/3">
+              <ol class="space-y-4">
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">1</span>
+                  <div>
+                    <p class="font-bold">Remove from refrigerator</p>
+                    <p>Take the dough out of the fridge and divide it into 2-3 equal portions, depending on your desired
+                      size.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">2</span>
+                  <div>
+                    <p class="font-bold">Second rise</p>
+                    <p>Form each portion into a ball, place in separate bowls, cover with a cloth, and let rise at room
+                      temperature for 2-3 hours until doubled in size.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">3</span>
+                  <div>
+                    <p class="font-bold">Preheat oven</p>
+                    <p>Heat your oven to its highest setting (preferably 250°C/480°F or higher) with a pizza stone or
+                      heavy baking sheet inside.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">4</span>
+                  <div>
+                    <p class="font-bold">Shape the pinsa</p>
+                    <p>Generously dust your work surface with rice flour. Gently press and stretch the dough with your
+                      fingertips into an oval shape about 25-30cm (10-12 inches) long. The dough should be about 1cm
+                      thick with slightly thicker edges.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">5</span>
+                  <div>
+                    <p class="font-bold">Transfer and top</p>
+                    <p>Transfer the shaped dough to a pizza peel or parchment paper sprinkled with semolina flour. Add
+                      your desired toppings, or for a simple traditional pinsa, just drizzle with olive oil and sprinkle
+                      with sea salt and fresh rosemary.</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <span
+                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">6</span>
+                  <div>
+                    <p class="font-bold">Bake</p>
+                    <p>Slide the pinsa onto the preheated stone or baking sheet and bake for 10-15 minutes until the
+                      crust is golden and crispy. Use kitchen scissors to cut without crushing the airy structure.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="md:w-1/3 mt-4 md:mt-0">
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mb-4">
+                <h4 class="font-bold text-lg mb-2">Shaping Tips:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                    <p>Use your fingertips to dimple the dough rather than flattening it, preserving air bubbles.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                    <p>Be generous with rice flour when shaping to prevent sticking and create the authentic crispy
+                      exterior.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                    <p>Let gravity help by gently stretching the dough while holding it up.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 class="font-bold text-lg mb-2">Baking Techniques:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                    <p>For wet toppings like tomato sauce, consider baking the base for 5-7 minutes first, then adding
+                      toppings and finishing baking.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                    <p>Some toppings like fresh burrata should be added after baking.</p>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                    <p>Don't overload with toppings, which can make the pinsa soggy.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Tutorial Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-pinsa text-center">Video Tutorial</h2>
+      <p class="text-center mb-6 max-w-2xl mx-auto">Watch this detailed tutorial to master the techniques for making
+        perfect Roman Pinsa at home.</p>
+
+      <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/l7wAR34lnSc"
+            title="Pinsa: The Evolution of Pizza - Master the Recipe with Our Detailed Tutorial" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expert Tips Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-pinsa text-center">Chef's Pro Tips</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <div class="text-4xl text-pinsa mb-3">
+            <i class="fas fa-temperature-low"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Temperature Control</h3>
+          <p>Cold water and cold fermentation are crucial for developing flavor and texture. The slow, controlled
+            process breaks down gluten making the pinsa more digestible and developing complex flavors.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <div class="text-4xl text-pinsa mb-3">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Gentle Handling</h3>
+          <p>The high hydration dough is delicate. Handle with wet or oiled hands, never force shaping, and preserve air
+            bubbles by using fingertips to dimple rather than pressing flat.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <div class="text-4xl text-pinsa mb-3">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Balance in Toppings</h3>
+          <p>Less is more with pinsa toppings. The light, airy crust deserves to shine. Balance flavors by combining
+            sweet, salty, and aromatic elements, and add delicate ingredients after baking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Troubleshooting -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-pinsa text-center">Troubleshooting Guide</h2>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="border-b pb-4 md:border-b-0 md:border-r md:pr-6 md:pb-0">
+            <h3 class="text-xl font-bold mb-3">Problems & Solutions</h3>
+
+            <div class="space-y-4">
+              <div>
+                <p class="font-bold">Dough too sticky to handle</p>
+                <p class="text-gray-700">Use wet hands or oil them lightly rather than adding more flour. Chill the
+                  dough if needed to make it more manageable.</p>
+              </div>
+
+              <div>
+                <p class="font-bold">Dough not rising properly</p>
+                <p class="text-gray-700">Check yeast freshness. Ensure your room is warm enough during the second rise
+                  (around 75°F/24°C is ideal).</p>
+              </div>
+
+              <div>
+                <p class="font-bold">Crust not crispy enough</p>
+                <p class="text-gray-700">Ensure oven is fully preheated to maximum temperature. Use a pizza stone if
+                  possible. Be generous with rice flour when shaping.</p>
+              </div>
+
+              <div>
+                <p class="font-bold">Soggy middle</p>
+                <p class="text-gray-700">Reduce wet toppings or par-bake the base first. Ensure dough is evenly
+                  stretched without thick spots.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:pl-6">
+            <h3 class="text-xl font-bold mb-3">Adapting to Your Kitchen</h3>
+
+            <div class="space-y-4">
+              <div>
+                <p class="font-bold">No pizza stone available</p>
+                <p class="text-gray-700">Use an inverted heavy baking sheet or cast iron pan, preheated for at least 30
+                  minutes.</p>
+              </div>
+
+              <div>
+                <p class="font-bold">No stand mixer</p>
+                <p class="text-gray-700">Mix by hand with a wooden spoon, then use the "stretch and fold" technique
+                  every 15 minutes for an hour instead of traditional kneading.</p>
+              </div>
+
+              <div>
+                <p class="font-bold">Can't find specific flours</p>
+                <p class="text-gray-700">Rice flour is essential but can be made by grinding rice in a blender. For
+                  spelt/soy, substitute whole wheat flour with a bit more hydration.</p>
+              </div>
+
+              <div>
+                <p class="font-bold">Short on time</p>
+                <p class="text-gray-700">While 24+ hours is ideal, even 8-12 hours in the refrigerator will give
+                  improved texture and flavor over immediate baking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 text-center text-gray-600">
+      <p class="mb-2">Enjoy your authentic Roman Pinsa adventure!</p>
+      <p class="text-sm">Cooked with ❤️ by <a href="https://srdjan.github.io" target="_blank" rel="noopener noreferrer">⊣˚∆˚⊢</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>
