@@ -1,3 +1,7 @@
+</div>
+</body>
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Authentic Roman Pinsa Guide</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
@@ -13,12 +16,33 @@
     :root {
       --pinsa-red: #B71C1C;
       --pinsa-bg: #FFF8E1;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --yellow-50: #fffbeb;
+      --yellow-200: #fef08a;
+      --yellow-600: #ca8a04;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --transition: all 0.3s ease;
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
       font-family: 'Lato', sans-serif;
       color: #333;
       line-height: 1.6;
+      background-color: var(--gray-50);
     }
 
     h1,
@@ -26,26 +50,330 @@
     h3,
     h4 {
       font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-position: inside;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--pinsa-red);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .space-y>*+* {
+      margin-top: 0.5rem;
+    }
+
+    .space-y-md>*+* {
+      margin-top: 1rem;
+    }
+
+    .space-y-lg>*+* {
+      margin-top: 1.5rem;
+    }
+
+    /* Utilities */
+    .text-center {
+      text-align: center;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .text-white {
+      color: var(--white);
     }
 
     .text-pinsa {
       color: var(--pinsa-red);
     }
 
+    .text-gray {
+      color: var(--gray-600);
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .text-md {
+      font-size: 1rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .bg-white {
+      background-color: var(--white);
+    }
+
     .bg-pinsa {
       background-color: var(--pinsa-bg);
     }
 
-    .card {
+    .bg-gray-50 {
+      background-color: var(--gray-50);
+    }
+
+    .bg-gray-100 {
+      background-color: var(--gray-100);
+    }
+
+    .bg-yellow-50 {
+      background-color: var(--yellow-50);
+    }
+
+    .bg-yellow-600 {
+      background-color: var(--yellow-600);
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+
+    .rounded-lg {
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .border {
+      border: 1px solid var(--gray-200);
+    }
+
+    .border-yellow {
+      border-color: var(--yellow-200);
+    }
+
+    .p-1 {
+      padding: 0.25rem;
+    }
+
+    .p-2 {
+      padding: 0.5rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-5 {
+      padding: 1.25rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .my-2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .my-4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .my-6 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.25rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .mt-16 {
+      margin-top: 4rem;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-5 {
+      margin-bottom: 1.25rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mb-10 {
+      margin-bottom: 2.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .mr-3 {
+      margin-right: 0.75rem;
+    }
+
+    .max-w-2xl {
+      max-width: 42rem;
+    }
+
+    .max-w-3xl {
+      max-width: 48rem;
+    }
+
+    .max-w-4xl {
+      max-width: 56rem;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    /* Components */
+    .card {
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      box-shadow: var(--shadow-md);
+      padding: 1.25rem;
+      transition: var(--transition);
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .step-number {
+      background-color: var(--pinsa-red);
+      color: var(--white);
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .tip-icon {
+      color: var(--yellow-600);
+      margin-right: 0.5rem;
+    }
+
+    .check-icon {
+      color: var(--pinsa-red);
+      margin-right: 0.5rem;
     }
 
     .video-container {
@@ -70,39 +398,142 @@
       background-position: right bottom;
       background-repeat: no-repeat;
     }
+
+    /* Responsive Grid */
+    .grid-1 {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .text-3xl {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-2-3 {
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .grid-1-3 {
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .md-border-right {
+        border-right: 1px solid var(--gray-200);
+        padding-right: 1.25rem;
+      }
+
+      .md-padding-left {
+        padding-left: 1.25rem;
+      }
+
+      .container {
+        padding: 1.5rem 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 2rem;
+      }
+
+      .text-3xl {
+        font-size: 2.5rem;
+      }
+    }
+
+    .ingredients-list {
+      list-style-type: none;
+    }
+
+    .ingredients-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+
+    .steps-list {
+      list-style-type: none;
+    }
+
+    .steps-list li {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    .toppings-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .equipment-list {
+      list-style-type: none;
+    }
+
+    .equipment-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .tips-list {
+      list-style-type: none;
+    }
+
+    .tips-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 
-<body class="bg-gray-50">
-  <div class="px-4 py-6 max-w-6xl mx-auto">
+<body>
+  <div class="container">
     <!-- Header -->
     <header class="text-center mb-8">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-pinsa mb-3">Roman Pinsa</h1>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">The ancient Roman flatbread with a light, airy
-        texture and crispy crust that's taking the culinary world by storm</p>
+      <h1 class="text-3xl font-bold text-pinsa mb-3">Roman Pinsa</h1>
+      <p class="text-lg text-gray max-w-3xl mx-auto">The ancient Roman flatbread with a light, airy texture and crispy
+        crust that's taking the culinary world by storm</p>
     </header>
 
     <!-- History Section -->
     <section class="mb-10">
-      <div class="card p-5 history-bg">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-pinsa">The History of Pinsa</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div class="md:col-span-2">
-            <p class="mb-3">The term "pinsa" derives from the Latin word <em>pinsere</em>, meaning "to stretch" or
-              "press out," referring to the traditional method of hand-stretching the dough into its characteristic oval
-              shape.</p>
-            <p class="mb-3">Dating back over 2000 years to ancient Rome, pinsa was originally a simple flatbread made by
-              farmers using a mixture of cereals like millet, barley, and spelt. It was considered poor man's food,
-              often topped simply with olive oil, salt, and aromatic herbs.</p>
+      <div class="card history-bg">
+        <h2 class="text-2xl text-pinsa mb-3">The History of Pinsa</h2>
+        <div class="grid grid-2-3">
+          <div>
+            <p>The term "pinsa" derives from the Latin word <em>pinsere</em>, meaning "to stretch" or "press out,"
+              referring to the traditional method of hand-stretching the dough into its characteristic oval shape.</p>
+            <p>Dating back over 2000 years to ancient Rome, pinsa was originally a simple flatbread made by farmers
+              using a mixture of cereals like millet, barley, and spelt. It was considered poor man's food, often topped
+              simply with olive oil, salt, and aromatic herbs.</p>
             <p>The modern version of Pinsa Romana was refined around 2001 by Corrado Di Marco, who developed the special
               flour blend that gives pinsa its distinctive light, airy texture and high digestibility. Since then, pinsa
               has experienced a culinary renaissance with thousands of specialized shops (<em>pinserie</em>) opening
               throughout Italy and worldwide.</p>
           </div>
           <div>
-            <div class="bg-gray-100 p-4 rounded-lg h-full">
+            <div class="bg-gray-100 p-4 rounded-lg">
               <h3 class="text-xl font-bold mb-2">Pinsa vs. Pizza: The Differences</h3>
-              <ul class="list-disc pl-5 space-y-1">
+              <ul>
                 <li>Uses a blend of wheat, rice, and soy/spelt flours</li>
                 <li>Higher hydration (80% water content)</li>
                 <li>Oval shape rather than round</li>
@@ -118,64 +549,64 @@
 
     <!-- Recipe Ingredients Section -->
     <section class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-5 text-pinsa text-center">Authentic Roman Pinsa Recipe</h2>
-      <div class="card p-5">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <h2 class="text-2xl text-pinsa text-center mb-5">Authentic Roman Pinsa Recipe</h2>
+      <div class="card">
+        <div class="grid grid-2">
           <div>
-            <h3 class="text-xl sm:text-2xl font-bold mb-3">Dough Ingredients</h3>
-            <p class="mb-2 text-gray-600 italic">Makes 2-3 medium-sized pinsa</p>
-            <ul class="space-y-2 mb-5">
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+            <h3 class="text-xl font-bold mb-3">Dough Ingredients</h3>
+            <p class="mb-2 text-gray italic">Makes 2-3 medium-sized pinsa</p>
+            <ul class="ingredients-list mb-5">
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">500g</span> Italian "00" flour (or all-purpose flour)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">50g</span> rice flour (essential for authentic texture)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">40g</span> spelt flour (or soy flour as alternative)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">460ml</span> ice-cold water (about 80% hydration)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">2.5g</span> active dry yeast (about ¾ tsp)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">10g</span> salt (about 1¾ tsp)</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div><span class="font-bold">5ml</span> extra virgin olive oil (1 tsp), plus more for topping</div>
               </li>
-              <li class="flex items-start">
-                <span class="text-pinsa mr-2"><i class="fas fa-check-circle"></i></span>
+              <li>
+                <span class="check-icon"><i class="fas fa-check-circle"></i></span>
                 <div>Semolina flour for dusting and shaping</div>
               </li>
             </ul>
 
-            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow">
               <h4 class="font-bold text-lg mb-2">Equipment Needed:</h4>
-              <ul class="space-y-1">
-                <li class="flex items-center">
-                  <span class="text-yellow-600 mr-2"><i class="fas fa-utensils"></i></span>
+              <ul class="equipment-list">
+                <li>
+                  <span class="tip-icon"><i class="fas fa-utensils"></i></span>
                   Large mixing bowl
                 </li>
-                <li class="flex items-center">
-                  <span class="text-yellow-600 mr-2"><i class="fas fa-blender"></i></span>
+                <li>
+                  <span class="tip-icon"><i class="fas fa-blender"></i></span>
                   Stand mixer with dough hook (optional)
                 </li>
-                <li class="flex items-center">
-                  <span class="text-yellow-600 mr-2"><i class="fas fa-temperature-high"></i></span>
+                <li>
+                  <span class="tip-icon"><i class="fas fa-temperature-high"></i></span>
                   Pizza stone or heavy baking sheet
                 </li>
-                <li class="flex items-center">
-                  <span class="text-yellow-600 mr-2"><i class="fas fa-cut"></i></span>
+                <li>
+                  <span class="tip-icon"><i class="fas fa-cut"></i></span>
                   Kitchen scissors
                 </li>
               </ul>
@@ -183,11 +614,11 @@
           </div>
 
           <div>
-            <h3 class="text-xl sm:text-2xl font-bold mb-3">Popular Topping Combinations</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <h3 class="text-xl font-bold mb-3">Popular Topping Combinations</h3>
+            <div class="grid grid-2">
               <div class="bg-gray-50 p-3 rounded-lg">
                 <h4 class="font-bold mb-1">Classic Margherita</h4>
-                <ul class="space-y-1">
+                <ul class="toppings-list">
                   <li>Tomato sauce</li>
                   <li>Fresh mozzarella, torn into pieces</li>
                   <li>Fresh basil leaves (add after baking)</li>
@@ -197,7 +628,7 @@
 
               <div class="bg-gray-50 p-3 rounded-lg">
                 <h4 class="font-bold mb-1">Mortadella & Burrata</h4>
-                <ul class="space-y-1">
+                <ul class="toppings-list">
                   <li>Bake pinsa base with olive oil only</li>
                   <li>After baking, top with torn burrata</li>
                   <li>Thin slices of mortadella</li>
@@ -207,7 +638,7 @@
 
               <div class="bg-gray-50 p-3 rounded-lg">
                 <h4 class="font-bold mb-1">Artichoke & Pancetta</h4>
-                <ul class="space-y-1">
+                <ul class="toppings-list">
                   <li>Shredded mozzarella</li>
                   <li>Diced pancetta or bacon</li>
                   <li>Prepared artichoke hearts</li>
@@ -218,7 +649,7 @@
 
               <div class="bg-gray-50 p-3 rounded-lg">
                 <h4 class="font-bold mb-1">Traditional Simple</h4>
-                <ul class="space-y-1">
+                <ul class="toppings-list">
                   <li>Good quality olive oil</li>
                   <li>Flaky sea salt</li>
                   <li>Fresh rosemary</li>
@@ -233,56 +664,51 @@
 
     <!-- Step-by-Step Instructions -->
     <section class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-pinsa text-center">Step-by-Step Instructions</h2>
+      <h2 class="text-2xl text-pinsa text-center mb-4">Step-by-Step Instructions</h2>
       <p class="text-center mb-6 max-w-2xl mx-auto">This process spans 2-3 days, but the actual hands-on time is
         minimal. The magic happens during the long fermentation.</p>
 
-      <div class="space-y-6">
+      <div class="space-y-lg">
         <!-- Day 1: Prepare the Dough -->
-        <div class="card p-5">
-          <h3 class="text-xl sm:text-2xl font-bold mb-3">Day 1: Prepare the Dough</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="md:col-span-2">
-              <ol class="space-y-3">
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">1</span>
+        <div class="card">
+          <h3 class="text-xl font-bold mb-3">Day 1: Prepare the Dough</h3>
+          <div class="grid grid-1-3">
+            <div>
+              <ol class="steps-list">
+                <li>
+                  <span class="step-number">1</span>
                   <div>
                     <p class="font-bold">Mix dry ingredients</p>
                     <p>In a large bowl, whisk together the "00" flour, rice flour, and spelt flour with the yeast until
                       well combined.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">2</span>
+                <li>
+                  <span class="step-number">2</span>
                   <div>
                     <p class="font-bold">Add water gradually</p>
                     <p>Add about ¾ of the cold water (350ml) to the flour mixture and begin mixing either by hand or
                       with a stand mixer using the dough hook attachment.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">3</span>
+                <li>
+                  <span class="step-number">3</span>
                   <div>
                     <p class="font-bold">Add oil and salt</p>
                     <p>Add the remaining water with the salt and olive oil. Knead for about 10-12 minutes until the
                       dough becomes smooth and elastic. The dough will be very sticky.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">4</span>
+                <li>
+                  <span class="step-number">4</span>
                   <div>
                     <p class="font-bold">First rest</p>
                     <p>Cover the bowl with plastic wrap or a damp towel and let it rest at room temperature for about 1
                       hour until it doubles in size.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">5</span>
+                <li>
+                  <span class="step-number">5</span>
                   <div>
                     <p class="font-bold">Fold and refrigerate</p>
                     <p>After the initial rise, fold the dough over itself a few times. Place in a clean, lightly oiled
@@ -292,19 +718,19 @@
               </ol>
             </div>
             <div>
-              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 h-full">
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow">
                 <h4 class="font-bold text-lg mb-2">Expert Tips:</h4>
-                <ul class="space-y-2">
-                  <li class="flex items-start">
-                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                <ul class="tips-list">
+                  <li>
+                    <span class="tip-icon"><i class="fas fa-lightbulb"></i></span>
                     <p>Use ice-cold water to slow fermentation and develop flavor.</p>
                   </li>
-                  <li class="flex items-start">
-                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                  <li>
+                    <span class="tip-icon"><i class="fas fa-lightbulb"></i></span>
                     <p>The dough will be very sticky - use wet or oiled hands.</p>
                   </li>
-                  <li class="flex items-start">
-                    <span class="text-yellow-600 mr-2"><i class="fas fa-lightbulb"></i></span>
+                  <li>
+                    <span class="tip-icon"><i class="fas fa-lightbulb"></i></span>
                     <p>For best flavor, aim for at least 36 hours of cold fermentation.</p>
                   </li>
                 </ul>
@@ -314,58 +740,52 @@
         </div>
 
         <!-- Day 2 or 3: Shape and Bake -->
-        <div class="card p-5">
-          <h3 class="text-xl sm:text-2xl font-bold mb-3">Day 2 or 3: Shape and Bake</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="md:col-span-2">
-              <ol class="space-y-3">
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">1</span>
+        <div class="card">
+          <h3 class="text-xl font-bold mb-3">Day 2 or 3: Shape and Bake</h3>
+          <div class="grid grid-1-3">
+            <div>
+              <ol class="steps-list">
+                <li>
+                  <span class="step-number">1</span>
                   <div>
                     <p class="font-bold">Remove from refrigerator</p>
                     <p>Take the dough out and divide it into 2-3 equal portions.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">2</span>
+                <li>
+                  <span class="step-number">2</span>
                   <div>
                     <p class="font-bold">Second rise</p>
                     <p>Form each portion into a ball, place in separate bowls, cover, and let rise at room temperature
                       for 2-3 hours until doubled.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">3</span>
+                <li>
+                  <span class="step-number">3</span>
                   <div>
                     <p class="font-bold">Preheat oven</p>
                     <p>Heat your oven to its highest setting (preferably 250°C/480°F or higher) with a pizza stone or
                       heavy baking sheet inside.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">4</span>
+                <li>
+                  <span class="step-number">4</span>
                   <div>
                     <p class="font-bold">Shape the pinsa</p>
                     <p>Dust your work surface with rice flour. Gently press and stretch the dough with your fingertips
                       into an oval shape about 25-30cm long and 1cm thick.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">5</span>
+                <li>
+                  <span class="step-number">5</span>
                   <div>
                     <p class="font-bold">Transfer and top</p>
                     <p>Transfer to a pizza peel or parchment paper with semolina flour. Add desired toppings or simply
                       drizzle with olive oil and add salt and rosemary.</p>
                   </div>
                 </li>
-                <li class="flex">
-                  <span
-                    class="bg-pinsa text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 mt-1">6</span>
+                <li>
+                  <span class="step-number">6</span>
                   <div>
                     <p class="font-bold">Bake</p>
                     <p>Slide onto the preheated stone or baking sheet and bake for 10-15 minutes until golden and
@@ -375,38 +795,38 @@
               </ol>
             </div>
             <div>
-              <div class="space-y-3">
-                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+              <div class="space-y-md">
+                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow">
                   <h4 class="font-bold text-lg mb-1">Shaping Tips:</h4>
-                  <ul class="space-y-1">
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                  <ul class="tips-list">
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-hand-point-up"></i></span>
                       <p>Use fingertips to dimple, preserving air bubbles.</p>
                     </li>
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-hand-point-up"></i></span>
                       <p>Be generous with rice flour to prevent sticking.</p>
                     </li>
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-hand-point-up"></i></span>
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-hand-point-up"></i></span>
                       <p>Let gravity help while gently stretching.</p>
                     </li>
                   </ul>
                 </div>
 
-                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow">
                   <h4 class="font-bold text-lg mb-1">Baking Techniques:</h4>
-                  <ul class="space-y-1">
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                  <ul class="tips-list">
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-fire"></i></span>
                       <p>For wet toppings, pre-bake base for 5-7 minutes.</p>
                     </li>
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-fire"></i></span>
                       <p>Add delicate toppings like burrata after baking.</p>
                     </li>
-                    <li class="flex items-start">
-                      <span class="text-yellow-600 mr-2"><i class="fas fa-fire"></i></span>
+                    <li>
+                      <span class="tip-icon"><i class="fas fa-fire"></i></span>
                       <p>Don't overload with toppings to avoid sogginess.</p>
                     </li>
                   </ul>
@@ -420,11 +840,11 @@
 
     <!-- Video Tutorial Section -->
     <section class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-pinsa text-center">Video Tutorial</h2>
+      <h2 class="text-2xl text-pinsa text-center mb-4">Video Tutorial</h2>
       <p class="text-center mb-4 max-w-2xl mx-auto">Watch this detailed tutorial to master the techniques for making
         perfect Roman Pinsa at home.</p>
 
-      <div class="max-w-4xl mx-auto card p-3">
+      <div class="max-w-4xl mx-auto card">
         <div class="video-container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/l7wAR34lnSc"
             title="Pinsa: The Evolution of Pizza - Master the Recipe with Our Detailed Tutorial" frameborder="0"
@@ -436,10 +856,10 @@
 
     <!-- Chef's Pro Tips Section -->
     <section class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-pinsa text-center">Chef's Pro Tips</h2>
+      <h2 class="text-2xl text-pinsa text-center mb-4">Chef's Pro Tips</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="card p-4">
+      <div class="grid grid-3">
+        <div class="card">
           <div class="text-3xl text-pinsa mb-2">
             <i class="fas fa-temperature-low"></i>
           </div>
@@ -448,7 +868,7 @@
             down gluten making the pinsa more digestible and developing complex flavors.</p>
         </div>
 
-        <div class="card p-4">
+        <div class="card">
           <div class="text-3xl text-pinsa mb-2">
             <i class="fas fa-hand-sparkles"></i>
           </div>
@@ -457,7 +877,7 @@
             bubbles by using fingertips to dimple rather than pressing flat.</p>
         </div>
 
-        <div class="card p-4">
+        <div class="card">
           <div class="text-3xl text-pinsa mb-2">
             <i class="fas fa-balance-scale"></i>
           </div>
@@ -470,65 +890,64 @@
 
     <!-- Troubleshooting Guide -->
     <section class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-pinsa text-center">Troubleshooting Guide</h2>
+      <h2 class="text-2xl text-pinsa text-center mb-4">Troubleshooting Guide</h2>
 
-      <div class="card p-5">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="md:border-r md:pr-5">
+      <div class="card">
+        <div class="grid grid-2">
+          <div class="md-border-right">
             <h3 class="text-xl font-bold mb-3">Problems & Solutions</h3>
 
-            <div class="space-y-3">
+            <div class="space-y-md">
               <div>
                 <p class="font-bold">Dough too sticky to handle</p>
-                <p class="text-gray-700">Use wet hands or oil them lightly rather than adding more flour. Chill if
-                  needed.</p>
-              </div>
-
-              <div>
-                <p class="font-bold">Dough not rising properly</p>
-                <p class="text-gray-700">Check yeast freshness. Ensure your room is warm enough during the second rise.
+                <p class="text-gray">Use wet hands or oil them lightly rather than adding more flour. Chill if needed.
                 </p>
               </div>
 
               <div>
+                <p class="font-bold">Dough not rising properly</p>
+                <p class="text-gray">Check yeast freshness. Ensure your room is warm enough during the second rise.</p>
+              </div>
+
+              <div>
                 <p class="font-bold">Crust not crispy enough</p>
-                <p class="text-gray-700">Ensure oven is fully preheated to maximum temperature. Use a pizza stone if
+                <p class="text-gray">Ensure oven is fully preheated to maximum temperature. Use a pizza stone if
                   possible.</p>
               </div>
 
               <div>
                 <p class="font-bold">Soggy middle</p>
-                <p class="text-gray-700">Reduce wet toppings or par-bake the base first. Ensure even thickness.</p>
+                <p class="text-gray">Reduce wet toppings or par-bake the base first. Ensure even thickness.</p>
               </div>
             </div>
           </div>
 
-          <div class="md:pl-5">
+          <div class="md-padding-left">
             <h3 class="text-xl font-bold mb-3">Adapting to Your Kitchen</h3>
 
-            <div class="space-y-3">
+            <div class="space-y-md">
               <div>
                 <p class="font-bold">No pizza stone available</p>
-                <p class="text-gray-700">Use an inverted heavy baking sheet or cast iron pan, preheated for at least 30
+                <p class="text-gray">Use an inverted heavy baking sheet or cast iron pan, preheated for at least 30
                   minutes.</p>
               </div>
 
               <div>
                 <p class="font-bold">No stand mixer</p>
-                <p class="text-gray-700">Mix by hand with a wooden spoon, then use the "stretch and fold" technique
-                  every 15 minutes for an hour.</p>
+                <p class="text-gray">Mix by hand with a wooden spoon, then use the "stretch and fold" technique every 15
+                  minutes for an hour.</p>
               </div>
 
               <div>
                 <p class="font-bold">Can't find specific flours</p>
-                <p class="text-gray-700">Rice flour is essential but can be made by grinding rice. For spelt/soy,
-                  substitute whole wheat flour.</p>
+                <p class="text-gray">Rice flour is essential but can be made by grinding rice. For spelt/soy, substitute
+                  whole wheat flour.</p>
               </div>
 
               <div>
                 <p class="font-bold">Short on time</p>
-                <p class="text-gray-700">While 24+ hours is ideal, even 8-12 hours in the refrigerator will give
-                  improved results.</p>
+                <p class="text-gray">While 24+ hours is ideal, even 8-12 hours in the refrigerator will give improved
+                  results.</p>
               </div>
             </div>
           </div>
@@ -536,12 +955,11 @@
       </div>
     </section>
 
-    <p class="mb-2">Enjoy your authentic Roman Pinsa adventure!</p>
-    
     <!-- Footer -->
-    <footer class="mt-16 text-center text-gray-600">
+    <footer class="mt-16 text-center text-gray">
+      <p class="mb-2">Enjoy your authentic Roman Pinsa adventure!</p>
       <p class="text-sm">Cooked with ❤️ by <a href="https://srdjan.github.io" target="_blank"
-          rel="noopener noreferrer" class="text-pinsa hover:underline">⊣˚∆˚⊢</a></p>
+          rel="noopener noreferrer">⊣˚∆˚⊢</a></p>
     </footer>
   </div>
 </body>
